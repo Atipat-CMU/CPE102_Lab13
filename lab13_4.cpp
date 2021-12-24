@@ -2,6 +2,9 @@
 
 using namespace std;
 
+template <typename tvar>
+void mySwap(tvar &, tvar &);
+
 int main(){
 	int x, y;
 	string a, b;
@@ -30,3 +33,9 @@ int main(){
 	return 0;
 }
 
+template <typename tvar>
+void mySwap(tvar &x, tvar &y){
+	tvar x_clone = x;
+	x = y;
+	y = x_clone;
+}
